@@ -1,0 +1,19 @@
+fun diagonalDifference(arr: Array<Array<Int>>): Int {
+    // Write your code here
+    var n=arr.size-1;
+    var sum1=0;
+    for(i in 0..n ) {      
+         sum1 += arr.get(i).get(i) ;
+    }
+    
+    var sum2=0;
+    var len=arr.get(0).size-1;
+    
+    for(i in 0..n ) {      
+    sum2 += arr.get(i).get(len--);    
+    }
+    
+    var ans=Math.abs(sum1-sum2);
+    return ans;
+    
+}
