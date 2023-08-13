@@ -1,0 +1,19 @@
+fun strangeCounter(t: Long): Long {
+    // Write your code here
+    if( t==1L ) return 3L;
+    if( t==2L ) return 2L;
+    if( t==3L ) return 1L;
+        var v:Long=3; var j:Long=2;
+        var ans:Long=0;
+        while(true) {
+            var temp:Long =v+1;
+            v = (v*2)+3;
+            if(t >=temp && t<=v ) {
+                var temp1:Long= v-t;
+                ans=1+temp1;
+                return ans;
+            }
+        }
+        
+    return -1;
+}
