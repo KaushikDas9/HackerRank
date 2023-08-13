@@ -1,0 +1,12 @@
+fun staircase(n: Int): Unit {
+    // Write your code here
+    
+    for(i in 0..n-1) {
+        var len= n-1-i;
+        for(j in 0..n-1) {
+        if(j>=len) print("#");
+        else print(" ")
+        }
+        println();
+    }
+}
